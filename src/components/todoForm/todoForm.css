@@ -1,0 +1,15 @@
+.todoForm{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    align-items: end;
+}
+
+.inputForm{
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+    width: 80px;
+}
