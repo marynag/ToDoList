@@ -1,5 +1,3 @@
-import './todo.css';
-
 export const Todo = ({ item }) => {
 	return (
 		<tr>
