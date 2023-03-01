@@ -1,7 +1,7 @@
-import { TODOS } from '../../../constants';
+import { todoCardMap } from '../../../constants';
 
 export const ColumnNames = () => {
-	const columnNames = Object.keys(TODOS[0]);
+	const columnNames = Object.keys(todoCardMap);
 	return (
 		<tr>
 			{columnNames.map((column) => {
