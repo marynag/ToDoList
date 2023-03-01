@@ -8,7 +8,7 @@ export const TodosTable = () => {
 		<table>
 			<ColumnNames />
 			{TODOS.map((item) => {
-				return <Todo item={item} />;
+				return <Todo item={item} key={item.id} />;
 			})}
 		</table>
 	);

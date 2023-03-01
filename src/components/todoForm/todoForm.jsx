@@ -21,7 +21,7 @@ export const TodoForm = () => {
 	return (
 		<div className={'todoForm'}>
 			<div className={'inputForm'}>
-				<lable>Title</lable>
+				<label>Title</label>
 				<input
 					className={titleClassName}
 					type='text'
@@ -33,7 +33,7 @@ export const TodoForm = () => {
 				{!isTitleValid && <p className={'message'}>{MESSAGE}</p>}
 			</div>
 			<div className={'inputForm'}>
-				<lable>Description</lable>
+				<label>Description</label>
 				<input
 					className={descriptionClassName}
 					type='text'

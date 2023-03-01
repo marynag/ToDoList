@@ -5,7 +5,7 @@ export const ColumnNames = () => {
 	return (
 		<tr>
 			{columnNames.map((column) => {
-				return <th>{column.toUpperCase()} </th>;
+				return <th key={column}>{column.toUpperCase()}</th>;
 			})}
 		</tr>
 	);
