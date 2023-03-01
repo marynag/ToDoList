@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     width: 50%;
-    align-items: end;
+    align-items: start;
 }
 
 .inputForm{
@@ -11,5 +11,18 @@
 }
 
 button{
+    margin-top:20px;
     width: 80px;
+    padding: 5px;
+}
+.red{
+    border: 2px solid red;
+}
+
+.message{
+    color: red;
+}
+
+input{
+    padding: 5px;
 }
