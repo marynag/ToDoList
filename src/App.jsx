@@ -1,9 +1,9 @@
 import './App.css';
 import { TodosTable } from './components/todosTable/todosTable';
 import { TodoForm } from './components/todoForm/todoForm';
-import { reducer } from './store/reducer';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
+import { reducer } from './store/reducer';
 
 const store = createStore(reducer);
 

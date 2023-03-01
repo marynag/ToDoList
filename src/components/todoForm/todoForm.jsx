@@ -1,6 +1,6 @@
 import './todoForm.css';
 import { useState } from 'react';
-import { MESSAGE } from '../constants';
+import { MESSAGE } from '../../constants/constants';
 import { useDispatch, useSelector } from 'react-redux';
 import { ADD_TODOS } from '../../store/actionTypes';
 

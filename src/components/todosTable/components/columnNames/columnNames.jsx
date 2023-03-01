@@ -1,4 +1,4 @@
-import { todoCardMap } from '../../../constants';
+import { todoCardMap } from '../../../../constants/constants';
 
 export const ColumnNames = () => {
 	const columnNames = Object.keys(todoCardMap);
