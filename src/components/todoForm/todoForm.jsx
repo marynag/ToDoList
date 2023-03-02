@@ -3,16 +3,19 @@ import { useState } from 'react';
 import { MESSAGE } from '../../constants/constants';
 import { useDispatch, useSelector } from 'react-redux';
 import { ADD_TODOS } from '../../store/actionTypes';
+import React from 'react';
 
 export const TodoForm = () => {
-	const [title, setTitle] = useState('');
-	const [description, setDescription] = useState('');
+	const titleRef = React.createRef();
+	const descriptionRef = React.createRef();
 	const [isDescriptionValid, setDescriptionValid] = useState(true);
 	const [isTitleValid, setTitleValid] = useState(true);
 	const dispatch = useDispatch();
 	const todos = useSelector((state) => state);
 
 	const handleClick = () => {
+		const title = titleRef.current.value;
+		const description = titleRef.current.value;
 		setTitleValid(!!title);
 		setDescriptionValid(!!description);
 		if (!title || !description) {
@@ -38,9 +41,7 @@ export const TodoForm = () => {
 					className={titleClassName}
 					type='text'
 					placeholder='Enter title'
-					onChange={(e) => {
-						setTitle(e.target.value);
-					}}
+					ref={titleRef}
 				/>
 				{!isTitleValid && <p className={'message'}>{MESSAGE}</p>}
 			</div>
@@ -50,9 +51,7 @@ export const TodoForm = () => {
 					className={descriptionClassName}
 					type='text'
 					placeholder='Enter description'
-					onChange={(e) => {
-						setDescription(e.target.value);
-					}}
+					ref={descriptionRef}
 				/>
 				{!isDescriptionValid && <p className={'message'}>{MESSAGE}</p>}
 			</div>
